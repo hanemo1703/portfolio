@@ -1,0 +1,15 @@
+name: Keep-alive ping
+
+on:
+  schedule:
+    - cron: "*/14 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Plantme and Kino
+        run: |
+          curl -sS -o /dev/null -w "plantme: %{http_code}\n" --max-time 30 https://plantme.hanemo.space || true
+          curl -sS -o /dev/null -w "kino: %{http_code}\n" --max-time 30 https://kino.hanemo.space || true
