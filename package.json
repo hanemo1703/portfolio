@@ -1,16 +1,16 @@
 {
-  "name": "natours",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Nature tours",
+  "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "sass sass/main.scss css/style.css --watch --no-source-map",
     "devserver": "live-server",
     "start": "npm-run-all --parallel watch:sass devserver",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "compile:sass": "sass sass/main.scss css/style.comp.css --no-source-map",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "compress:css": "sass css/style.prefix.css css/style.css --style compressed --no-source-map",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "Nemo",
@@ -18,10 +18,10 @@
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "concat": "^1.0.3",
-    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.11",
-    "postcss-cli": "^9.0.1"
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.101.0"
   },
   "dependencies": {
     "live-server": "^1.2.2"
