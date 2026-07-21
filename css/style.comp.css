@@ -298,15 +298,18 @@ body {
   flex-direction: column;
 }
 .courses__card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-areas: "title title title" "provider meta link";
   align-items: center;
-  gap: 0.5rem 1rem;
+  column-gap: 1rem;
+  row-gap: 0.4rem;
   padding: 1.4rem 0;
   border-bottom: 1px solid rgba(104, 97, 48, 0.15);
 }
 .courses__provider {
-  flex: 0 0 auto;
+  grid-area: provider;
+  justify-self: start;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
@@ -314,20 +317,21 @@ body {
   color: #686130;
 }
 .courses__title {
-  flex: 1 1 auto;
+  grid-area: title;
   font-weight: 700;
   font-size: 1.6rem;
   color: #2a4f50;
 }
 .courses__meta {
-  flex: 0 0 auto;
+  grid-area: meta;
+  justify-self: start;
   font-size: 1rem;
   color: #686130;
 }
 .courses__card .btn {
+  grid-area: link;
+  justify-self: end;
   position: relative;
-  flex: 0 0 auto;
-  margin: 0 0 0 auto;
   padding: 0;
   font-size: 1rem;
   font-weight: 700;
@@ -361,13 +365,13 @@ body {
     padding: 3rem;
   }
   .courses__card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "provider" "meta" "link";
+    row-gap: 0.3rem;
+    justify-items: start;
   }
   .courses__card .btn {
-    margin-left: 0;
-    margin-top: 0.5rem;
+    justify-self: start;
   }
 }
 .divider {
@@ -659,7 +663,7 @@ body {
   display: inline-block;
   height: 85vh;
   width: 100%;
-  background-size: cover;
+  object-fit: cover;
   position: absolute;
   bottom: -1rem;
   left: 0;

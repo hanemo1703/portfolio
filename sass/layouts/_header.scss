@@ -21,8 +21,7 @@
     display: inline-block;
     height: 85vh;
     width: 100%;
-    // background-image: url(https://svgur.com/i/gkD.svg);
-    background-size: cover;
+    object-fit: cover;
     position: absolute;
     bottom: -1rem;
     left: 0;
