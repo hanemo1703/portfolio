@@ -11,16 +11,12 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script defer src="script.js"></script>
 
     <title>Nemo | Personal site</title>
   </head>
 
   <body>
-    <div id="popup-container" class="hidden">
-      <p class="popup"></p>
-    </div>
     <div class="load">
       <svg class="load__icon">
         <use xlink:href="img/sprite.svg#icon-spinner6"></use>
@@ -608,99 +604,46 @@
               >&nbsp;</span
             >
           </div>
-          <div class="contact__form-box">
-            <h3 class="heading-3 heading-3--dark">Say hi</h3>
-            <p class="heading-sub u-margin-bottom-small">
-              I will never share your email with anyone else
-            </p>
-            <!-- <form method="post">
-              <input type="button" value="Send Email" onclick="sendEmail()"/>
-            </form>  -->
-            <form
-              method="post"
-              action=""
-              class="contact__form"
-              id="contact-form">
-              <div class="contact__group contact__group--name">
-                <input
-                  type="text"
-                  class="contact__input"
-                  id="username"
-                  placeholder="Your name" />
-                <p class="contact__error contact__error--username"></p>
-              </div>
-              <div class="contact__group contact__group--email">
-                <input
-                  type="email"
-                  class="contact__input"
-                  id="email"
-                  placeholder="Email address" />
-                <p class="contact__error contact__error--email"></p>
-              </div>
-              <div class="contact__group contact__group--subject">
-                <input
-                  type="text"
-                  class="contact__input contact__input--lg"
-                  id="subject"
-                  placeholder="Subject" />
-                <p class="contact__error contact__error--subject"></p>
-              </div>
-              <div class="contact__group contact__group--message">
-                <textarea
-                  rows="4"
-                  type="text"
-                  class="contact__input contact__input--lg"
-                  id="message"
-                  placeholder="Message"></textarea>
-                <p class="contact__error contact__error--message"></p>
-              </div>
-              <input
-                type="button"
-                class="contact__btn"
-                value="Send message"
-                onclick="sendEmail()" />
-            </form>
-          </div>
           <div class="contact__details">
-            <h3 class="heading-3 heading-3--dark">Contact info</h3>
-            <p class="heading-sub u-margin-bottom-small">
-              Feel free to contact me!
-            </p>
-            <div class="contact__info-box">
-              <svg class="contact__icon">
-                <use xlink:href="img/sprite.svg#icon-v-card"></use>
-              </svg>
-              <div class="contact__info">
-                <h5 class="heading-5 heading-5--dark">Name</h5>
-                <p class="contact__text">Huỳnh Vĩ Hà</p>
+            <div class="contact__info-grid">
+              <div class="contact__info-box">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#icon-v-card"></use>
+                </svg>
+                <div class="contact__info">
+                  <h5 class="heading-5 heading-5--dark">Name</h5>
+                  <p class="contact__text">Huỳnh Vĩ Hà</p>
+                </div>
               </div>
-            </div>
-            <div class="contact__info-box">
-              <svg class="contact__icon">
-                <use xlink:href="img/sprite.svg#icon-location"></use>
-              </svg>
-              <div class="contact__info">
-                <h5 class="heading-5 heading-5--dark">Location</h5>
-                <p class="contact__text">Ho Chi Minh City, Vietnam</p>
+              <div class="contact__info-box">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#icon-location"></use>
+                </svg>
+                <div class="contact__info">
+                  <h5 class="heading-5 heading-5--dark">Location</h5>
+                  <p class="contact__text">Ho Chi Minh City, Vietnam</p>
+                </div>
               </div>
-            </div>
-            <div class="contact__info-box">
-              <svg class="contact__icon">
-                <use xlink:href="img/sprite.svg#icon-old-phone"></use>
-              </svg>
-              <div class="contact__info">
-                <h5 class="heading-5 heading-5--dark">Phone</h5>
-                <p class="contact__text">(+84) 766 90 1516</p>
-              </div>
-            </div>
-            <div class="contact__info-box">
-              <svg class="contact__icon">
-                <use xlink:href="img/sprite.svg#icon-mail"></use>
-              </svg>
-              <div class="contact__info">
-                <h5 class="heading-5 heading-5--dark">Gmail</h5>
-                <p class="contact__text">huynhviha1703@gmail.com</p>
-              </div>
+              <a class="contact__info-box" href="tel:+84766901516">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#icon-old-phone"></use>
+                </svg>
+                <div class="contact__info">
+                  <h5 class="heading-5 heading-5--dark">Phone</h5>
+                  <p class="contact__text">(+84) 766 90 1516</p>
+                </div>
+              </a>
+              <a
+                class="contact__info-box"
+                href="mailto:huynhviha1703@gmail.com">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+                <div class="contact__info">
+                  <h5 class="heading-5 heading-5--dark">Gmail</h5>
+                  <p class="contact__text">huynhviha1703@gmail.com</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
